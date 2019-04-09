@@ -21,6 +21,11 @@ public class EmpleadoPorHoras extends Empleado{
     public EmpleadoPorHoras() {
     }
 
+    public EmpleadoPorHoras(int codigo, String nombre, String cedula, Date fechaContratacion, double salario) {
+        super(codigo, nombre, cedula, fechaContratacion, salario);
+    }
+
+    
     public EmpleadoPorHoras(int numeroHorasExtra, double costoHoraExtra, int codigo, String nombre, String cedula, Date fechaContratacion, double salario) {
         super(codigo, nombre, cedula, fechaContratacion, salario);
         this.numeroHorasExtra = numeroHorasExtra;
@@ -43,6 +48,7 @@ public class EmpleadoPorHoras extends Empleado{
         this.costoHoraExtra = costoHoraExtra;
     }
 
+   
     @Override
     public double calcularSalarioFinal() {
          return super.getSalario() + (numeroHorasExtra*costoHoraExtra);

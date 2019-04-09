@@ -20,6 +20,8 @@ public class EmpleadoAsalariado extends Empleado {
     public EmpleadoAsalariado(int codigo, String nombre, String cedula, Date fechaContratacion, double salario) {
         super(codigo, nombre, cedula, fechaContratacion, salario);
     }
+    
+    
      /**
      * Método que permite calcular el salario final del empleado asalariado
      * 
