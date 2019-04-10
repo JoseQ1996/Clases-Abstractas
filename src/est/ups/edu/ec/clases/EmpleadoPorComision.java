@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author Usuario
  */
-public class EmpleadoPorComision extends Empleado {
+public final class EmpleadoPorComision extends Empleado {
     
     private double ventasMensuales;
 
@@ -60,4 +60,10 @@ public class EmpleadoPorComision extends Empleado {
      return super.getSalario();
         }
     }
+
+    @Override
+    public String toString() {
+        return  super.toString()+"EmpleadoPorComision{" + "ventasMensuales=" + ventasMensuales +  ",  Salario Final= "+ this.calcularSalarioFinal()+'}';
+    }
+    
 }

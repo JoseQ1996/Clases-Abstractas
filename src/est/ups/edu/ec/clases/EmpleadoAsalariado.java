@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author Usuario
  */
-public class EmpleadoAsalariado extends Empleado {
+public final class EmpleadoAsalariado extends Empleado {
 
     public EmpleadoAsalariado() {
     }
@@ -55,6 +55,12 @@ public class EmpleadoAsalariado extends Empleado {
         }
 
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+"Empleado Asalariado = { Salario Final "+ this.calcularSalarioFinal()+"}";
+    }
+    
      
     } 
     

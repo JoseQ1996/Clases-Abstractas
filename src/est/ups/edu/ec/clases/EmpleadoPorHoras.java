@@ -13,7 +13,7 @@ import java.util.Date;
  *
  * @author Usuario
  */
-public class EmpleadoPorHoras extends Empleado{
+public final class EmpleadoPorHoras extends Empleado{
 
    private int numeroHorasExtra;
    private double costoHoraExtra;
@@ -52,6 +52,11 @@ public class EmpleadoPorHoras extends Empleado{
     @Override
     public double calcularSalarioFinal() {
          return super.getSalario() + (numeroHorasExtra*costoHoraExtra);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+"EmpleadoPorHoras{" + "numeroHorasExtra=" + numeroHorasExtra + ", costoHoraExtra=" + costoHoraExtra + ",  Salario Final= "+ this.calcularSalarioFinal()+'}';
     }
       
     
